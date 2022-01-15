@@ -2,18 +2,18 @@ body{font-family: 'Poppins', sans-serif;
     color: #3a3a3a; margin: 0px;}
 
 h3{font-weight: 500; font-size: 1.35em;}
+
 /* -----------------------
 --------landing page--------
 ------------------------ */
 
     
-.tag-line {display: flex; justify-content: space-between;margin: 20px;}
-.tag-line>.fas{font-size: 30px; margin: 20px;}
+.tag-line {display: flex; justify-content: space-between;margin: 20px 100px;}
+.tag-line .fas{font-size: 30px; margin: 20px; cursor: pointer;}
 
 h1{font-size: 3em; margin: 48px 0 0 0;}
 
-.flexible-container{display: flex; border: 2px solid red;
-     padding:30px 0 50px 0 ;}
+.flexible-container{display: flex;   padding:30px 0 50px 0 ;}
 .flexible-container p{margin: 30px 0;}
 
 .button-link{text-decoration: none;
@@ -33,15 +33,22 @@ color: #E02C6D; transition: 0.4s; }
 -----collection---------
 --------------------- */
 
-.cards{display: grid;
+.heading-collection{display: flex;justify-content: center;
+padding: 30px;}
+
+.cards{display: grid; justify-content: space-between;
 grid-template-columns: repeat(3, 1fr);
-border: 5px solid red;
-grid-gap: 40px 10px}
+grid-row-gap: 25px; }
 
-/* .card{ display: flex;
-    margin: 20px solid red; justify-items: center;} */
+.card{justify-content: space-between;
+    padding-left: 15px; margin-left: 30px; }
 
+.full-star, .half-star{color: #FB8200;}
 .rating-number{margin-left: 20px; font-weight: 700;}
+
+.collapsed-cards{display: flex; padding: 40px 0; justify-content: flex-end;}
+.collapsed-cards a{text-decoration: none; color:#E02C6D;
+     font-weight: 700; }
 
 /* ---------------------
 ---------footer---------
@@ -56,3 +63,26 @@ footer p{color:#D9DBE1; text-align:center;}
 
 .social-icons {display: flex; justify-content: center;}
 .icons{color: honeydew; margin-left: 20px; font-size: 20px;}
+.icons:hover {color:#E02C6D ;}
+
+/* ----------------------------
+--------display----------------
+----------------------------- */
+
+/* mobile */
+
+@media only screen and (max-width:767px) { 
+    .flexible-container{flex-direction: column; flex-wrap: wrap;}
+
+.cards{ grid-template-columns: repeat(1, 1fr);
+flex-direction: column;flex-wrap: wrap;}
+}
+    
+/* tablet */
+
+@media only screen and (min-width:768px) and (max-width:1023px) { 
+    
+
+.cards{ grid-template-columns: repeat(2, 1fr);
+flex-direction: column;flex-wrap: wrap;}
+}
