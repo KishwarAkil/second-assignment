@@ -34,10 +34,25 @@ color: #E02C6D; transition: 0.4s; }
 --------------------- */
 
 .cards{display: grid;
-grid-template-columns: repeat(3, 1fr);}
+grid-template-columns: repeat(3, 1fr);
+border: 5px solid red;
+grid-gap: 40px 10px}
 
-.rating-number{margin-left: 20px;}
+/* .card{ display: flex;
+    margin: 20px solid red; justify-items: center;} */
+
+.rating-number{margin-left: 20px; font-weight: 700;}
 
 /* ---------------------
 ---------footer---------
 --------------------- */
+
+footer{padding: 25px;
+    background-color: #0A0826;}
+
+footer h2{color: #ffffff; text-align:center;} 
+        
+footer p{color:#D9DBE1; text-align:center;}
+
+.social-icons {display: flex; justify-content: center;}
+.icons{color: honeydew; margin-left: 20px; font-size: 20px;}
